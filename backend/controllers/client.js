@@ -49,6 +49,7 @@ export const getTransactions = async (req, res) => {
 
             return sortFormatted;
         };
+
         const sortFormatted = Boolean(sort) ? generateSort() : {};
 
         const transactions = await Transaction.find({
